@@ -16,8 +16,11 @@ This app’s main function is to enable a custom Splunk search command to conver
 •	Unpack to $SPLUNK_HOME/etc/apps on your Splunk search head and restart the instance.
 
 # Usage
-The command is intended for syslog events that end in the common suffix “This event” , and can be used for any windows version.                                                                                                                     The command returns a new field called “xml_raw” that displays syslog events in xml format.  
-Use as a search command like so:                                                                                                                 
+The command is intended for syslog events that end in the common suffix “This event” , and can be used for any windows version.
+The command returns a new field called “xml_raw” that displays syslog events in xml format.
+
+Use as a search command like so:
+
 index=syslog  “This  event”
 | systoxml
 | table xml_raw
