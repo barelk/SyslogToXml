@@ -1,0 +1,612 @@
+
+
+Id          : 4616
+Version     : 0
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="SubjectUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="SubjectUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="PreviousDate" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="PreviousTime" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="NewDate" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="NewTime" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="ProcessId" inType="win:Pointer" outType="win:HexInt64"/>
+                <data name="ProcessName" inType="win:UnicodeString" outType="xs:string"/>
+              </template>
+              
+Description : The system time was changed.
+              
+              Subject:
+              	Security ID:		%1
+              	Account Name:		%2
+              	Account Domain:		%3
+              	Logon ID:		%4
+              
+              Process Information:
+              	Process ID:	%9
+              	Name:		%10
+              
+              Previous Time:		%6 %5
+              New Time:		%8 %7
+              
+              This event is generated when the system time is changed. It is normal for the Windows Time Service, 
+              which runs with System privilege, to change the system time on a regular basis. Other system time 
+              changes may be indicative of attempts to tamper with the computer.
+
+
+
+
+
+Id          : 4616
+Version     : 1
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="SubjectUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="SubjectUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="PreviousTime" inType="win:FILETIME" outType="xs:dateTime"/>
+                <data name="NewTime" inType="win:FILETIME" outType="xs:dateTime"/>
+                <data name="ProcessId" inType="win:Pointer" outType="win:HexInt64"/>
+                <data name="ProcessName" inType="win:UnicodeString" outType="xs:string"/>
+              </template>
+              
+Description : The system time was changed.
+              
+              Subject:
+              	Security ID:		%1
+              	Account Name:		%2
+              	Account Domain:		%3
+              	Logon ID:		%4
+              
+              Process Information:
+              	Process ID:	%7
+              	Name:		%8
+              
+              Previous Time:		%5
+              New Time:		%6
+              
+              This event is generated when the system time is changed. It is normal for the Windows Time Service, 
+              which runs with System privilege, to change the system time on a regular basis. Other system time 
+              changes may be indicative of attempts to tamper with the computer.
+
+
+
+
+
+Id          : 4618
+Version     : 0
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="EventId" inType="win:UInt32" outType="xs:unsignedInt"/>
+                <data name="ComputerName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="TargetUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetUserDomain" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="EventCount" inType="win:UInt32" outType="xs:unsignedInt"/>
+                <data name="Duration" inType="win:UnicodeString" outType="xs:string"/>
+              </template>
+              
+Description : A monitored security event pattern has occurred.
+              
+              Subject:
+              	Security ID:		%3
+              	Account Name:		%4
+              	Account Domain:		%5
+              	Logon ID:		%6
+              
+              Alert Information:
+              	Computer:		%2
+              	Event ID:		%1
+              	Number of Events:	%7
+              	Duration:		%8
+              
+              This event is generated when Windows is configured to generate alerts in accordance with the Common 
+              Criteria Security Audit Analysis requirements (FAU_SAA) and an auditable event pattern occurs.
+
+
+
+
+
+Id          : 4621
+Version     : 0
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="CrashOnAuditFailValue" inType="win:UnicodeString" outType="xs:string"/>
+              </template>
+              
+Description : Administrator recovered system from CrashOnAuditFail. Users who are not administrators will now be 
+              allowed to log on. Some auditable activity might not have been recorded.
+              
+              Value of CrashOnAuditFail:	%1
+              
+              This event is logged after a system reboots following CrashOnAuditFail.
+
+
+
+Id          : 4625
+Version     : 0
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="SubjectUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="SubjectUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="TargetUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="TargetUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="Status" inType="win:HexInt32" outType="win:HexInt32"/>
+                <data name="FailureReason" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubStatus" inType="win:HexInt32" outType="win:HexInt32"/>
+                <data name="LogonType" inType="win:UInt32" outType="xs:unsignedInt"/>
+                <data name="LogonProcessName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="AuthenticationPackageName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="WorkstationName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TransmittedServices" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="LmPackageName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="KeyLength" inType="win:UInt32" outType="xs:unsignedInt"/>
+                <data name="ProcessId" inType="win:Pointer" outType="win:HexInt64"/>
+                <data name="ProcessName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="IpAddress" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="IpPort" inType="win:UnicodeString" outType="xs:string"/>
+              </template>
+              
+Description : An account failed to log on.
+              
+              Subject:
+              	Security ID:		%1
+              	Account Name:		%2
+              	Account Domain:		%3
+              	Logon ID:		%4
+              
+              Logon Type:			%11
+              
+              Account For Which Logon Failed:
+              	Security ID:		%5
+              	Account Name:		%6
+              	Account Domain:		%7
+              
+              Failure Information:
+              	Failure Reason:		%9
+              	Status:			%8
+              	Sub Status:		%10
+              
+              Process Information:
+              	Caller Process ID:	%18
+              	Caller Process Name:	%19
+              
+              Network Information:
+              	Workstation Name:	%14
+              	Source Network Address:	%20
+              	Source Port:		%21
+              
+              Detailed Authentication Information:
+              	Logon Process:		%12
+              	Authentication Package:	%13
+              	Transited Services:	%15
+              	Package Name (NTLM only):	%16
+              	Key Length:		%17
+              
+              This event is generated when a logon request fails. It is generated on the computer where access was 
+              attempted.
+              
+              The Subject fields indicate the account on the local system which requested the logon. This is most 
+              commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+              
+              The Logon Type field indicates the kind of logon that was requested. The most common types are 2 
+              (interactive) and 3 (network).
+              
+              The Process Information fields indicate which account and process on the system requested the logon.
+              
+              The Network Information fields indicate where a remote logon request originated. Workstation name is not 
+              always available and may be left blank in some cases.
+              
+              The authentication information fields provide detailed information about this specific logon request.
+              	- Transited services indicate which intermediate services have participated in this logon request.
+              	- Package name indicates which sub-protocol was used among the NTLM protocols.
+              	- Key length indicates the length of the generated session key. This will be 0 if no session key was 
+              requested.
+
+
+
+Id          : 4634
+Version     : 0
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="TargetUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="TargetUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="LogonType" inType="win:UInt32" outType="xs:unsignedInt"/>
+              </template>
+              
+Description : An account was logged off.
+              
+              Subject:
+              	Security ID:		%1
+              	Account Name:		%2
+              	Account Domain:		%3
+              	Logon ID:		%4
+              
+              Logon Type:			%5
+              
+              This event is generated when a logon session is destroyed. It may be positively correlated with a logon 
+              event using the Logon ID value. Logon IDs are only unique between reboots on the same computer.
+
+
+
+
+Id          : 4647
+Version     : 0
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="TargetUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="TargetUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+              </template>
+              
+Description : User initiated logoff:
+              
+              Subject:
+              	Security ID:		%1
+              	Account Name:		%2
+              	Account Domain:		%3
+              	Logon ID:		%4
+              
+              This event is generated when a logoff is initiated. No further user-initiated activity can occur. This 
+              event can be interpreted as a logoff event.
+
+
+
+
+
+Id          : 4648
+Version     : 0
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="SubjectUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="SubjectUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="LogonGuid" inType="win:GUID" outType="xs:GUID"/>
+                <data name="TargetUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetLogonGuid" inType="win:GUID" outType="xs:GUID"/>
+                <data name="TargetServerName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetInfo" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="ProcessId" inType="win:Pointer" outType="win:HexInt64"/>
+                <data name="ProcessName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="IpAddress" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="IpPort" inType="win:UnicodeString" outType="xs:string"/>
+              </template>
+              
+Description : A logon was attempted using explicit credentials.
+              
+              Subject:
+              	Security ID:		%1
+              	Account Name:		%2
+              	Account Domain:		%3
+              	Logon ID:		%4
+              	Logon GUID:		%5
+              
+              Account Whose Credentials Were Used:
+              	Account Name:		%6
+              	Account Domain:		%7
+              	Logon GUID:		%8
+              
+              Target Server:
+              	Target Server Name:	%9
+              	Additional Information:	%10
+              
+              Process Information:
+              	Process ID:		%11
+              	Process Name:		%12
+              
+              Network Information:
+              	Network Address:	%13
+              	Port:			%14
+              
+              This event is generated when a process attempts to log on an account by explicitly specifying that 
+              account’s credentials.  This most commonly occurs in batch-type configurations such as scheduled tasks, 
+              or when using the RUNAS command.
+
+
+
+
+
+Id          : 4649
+Version     : 0
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="SubjectUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="SubjectUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="TargetUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="RequestType" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="LogonProcessName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="AuthenticationPackage" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="WorkstationName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TransmittedServices" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="ProcessId" inType="win:Pointer" outType="win:HexInt64"/>
+                <data name="ProcessName" inType="win:UnicodeString" outType="xs:string"/>
+              </template>
+              
+Description : A replay attack was detected.
+              
+              Subject:
+              	Security ID:		%1
+              	Account Name:		%2
+              	Account Domain:		%3
+              	Logon ID:		%4
+              
+              Credentials Which Were Replayed:
+              	Account Name:		%5
+              	Account Domain:		%6
+              
+              Process Information:
+              	Process ID:		%12
+              	Process Name:		%13
+              
+              Network Information:
+              	Workstation Name:	%10
+              
+              Detailed Authentication Information:
+              	Request Type:		%7
+              	Logon Process:		%8
+              	Authentication Package:	%9
+              	Transited Services:	%11
+              
+              This event indicates that a Kerberos replay attack was detected- a request was received twice with 
+              identical information. This condition could be caused by network misconfiguration.
+
+
+
+
+Id          : 4624
+Version     : 2
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="SubjectUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="SubjectUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="TargetUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="TargetUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="LogonType" inType="win:UInt32" outType="xs:unsignedInt"/>
+                <data name="LogonProcessName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="AuthenticationPackageName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="WorkstationName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="LogonGuid" inType="win:GUID" outType="xs:GUID"/>
+                <data name="TransmittedServices" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="LmPackageName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="KeyLength" inType="win:UInt32" outType="xs:unsignedInt"/>
+                <data name="ProcessId" inType="win:Pointer" outType="win:HexInt64"/>
+                <data name="ProcessName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="IpAddress" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="IpPort" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="ImpersonationLevel" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="RestrictedAdminMode" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetOutboundUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetOutboundDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="VirtualAccount" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetLinkedLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="ElevatedToken" inType="win:UnicodeString" outType="xs:string"/>
+              </template>
+              
+Description : An account was successfully logged on.
+              
+              Subject:
+              	Security ID:		%1
+              	Account Name:		%2
+              	Account Domain:		%3
+              	Logon ID:		%4
+              
+              Logon Information:
+              	Logon Type:		%9
+              	Restricted Admin Mode:	%22
+              	Virtual Account:		%25
+              	Elevated Token:		%27
+              
+              Impersonation Level:		%21
+              
+              New Logon:
+              	Security ID:		%5
+              	Account Name:		%6
+              	Account Domain:		%7
+              	Logon ID:		%8
+              	Linked Logon ID:		%26
+              	Network Account Name:	%23
+              	Network Account Domain:	%24
+              	Logon GUID:		%13
+              
+              Process Information:
+              	Process ID:		%17
+              	Process Name:		%18
+              
+              Network Information:
+              	Workstation Name:	%12
+              	Source Network Address:	%19
+              	Source Port:		%20
+              
+              Detailed Authentication Information:
+              	Logon Process:		%10
+              	Authentication Package:	%11
+              	Transited Services:	%14
+              	Package Name (NTLM only):	%15
+              	Key Length:		%16
+              
+              This event is generated when a logon session is created. It is generated on the computer that was 
+              accessed.
+              
+              The subject fields indicate the account on the local system which requested the logon. This is most 
+              commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+              
+              The logon type field indicates the kind of logon that occurred. The most common types are 2 
+              (interactive) and 3 (network).
+              
+              The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was 
+              logged on.
+              
+              The network fields indicate where a remote logon request originated. Workstation name is not always 
+              available and may be left blank in some cases.
+              
+              The impersonation level field indicates the extent to which a process in the logon session can 
+              impersonate.
+              
+              The authentication information fields provide detailed information about this specific logon request.
+              	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+              	- Transited services indicate which intermediate services have participated in this logon request.
+              	- Package name indicates which sub-protocol was used among the NTLM protocols.
+              	- Key length indicates the length of the generated session key. This will be 0 if no session key was 
+              requested.
+
+
+
+
+
+
+
+Id          : 4624
+Version     : 1
+LogLink     : System.Diagnostics.Eventing.Reader.EventLogLink
+Level       : System.Diagnostics.Eventing.Reader.EventLevel
+Opcode      : System.Diagnostics.Eventing.Reader.EventOpcode
+Task        : System.Diagnostics.Eventing.Reader.EventTask
+Keywords    : {}
+Template    : <template xmlns="http://schemas.microsoft.com/win/2004/08/events">
+                <data name="SubjectUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="SubjectUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="SubjectLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="TargetUserSid" inType="win:SID" outType="xs:string"/>
+                <data name="TargetUserName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetDomainName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="TargetLogonId" inType="win:HexInt64" outType="win:HexInt64"/>
+                <data name="LogonType" inType="win:UInt32" outType="xs:unsignedInt"/>
+                <data name="LogonProcessName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="AuthenticationPackageName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="WorkstationName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="LogonGuid" inType="win:GUID" outType="xs:GUID"/>
+                <data name="TransmittedServices" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="LmPackageName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="KeyLength" inType="win:UInt32" outType="xs:unsignedInt"/>
+                <data name="ProcessId" inType="win:Pointer" outType="win:HexInt64"/>
+                <data name="ProcessName" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="IpAddress" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="IpPort" inType="win:UnicodeString" outType="xs:string"/>
+                <data name="ImpersonationLevel" inType="win:UnicodeString" outType="xs:string"/>
+              </template>
+              
+Description : An account was successfully logged on.
+              
+              Subject:
+              	Security ID:		%1
+              	Account Name:		%2
+              	Account Domain:		%3
+              	Logon ID:		%4
+              
+              Logon Type:			%9
+              
+              Impersonation Level:		%21
+              
+              New Logon:
+              	Security ID:		%5
+              	Account Name:		%6
+              	Account Domain:		%7
+              	Logon ID:		%8
+              	Logon GUID:		%13
+              
+              Process Information:
+              	Process ID:		%17
+              	Process Name:		%18
+              
+              Network Information:
+              	Workstation Name:	%12
+              	Source Network Address:	%19
+              	Source Port:		%20
+              
+              Detailed Authentication Information:
+              	Logon Process:		%10
+              	Authentication Package:	%11
+              	Transited Services:	%14
+              	Package Name (NTLM only):	%15
+              	Key Length:		%16
+              
+              This event is generated when a logon session is created. It is generated on the computer that was 
+              accessed.
+              
+              The subject fields indicate the account on the local system which requested the logon. This is most 
+              commonly a service such as the Server service, or a local process such as Winlogon.exe or Services.exe.
+              
+              The logon type field indicates the kind of logon that occurred. The most common types are 2 
+              (interactive) and 3 (network).
+              
+              The New Logon fields indicate the account for whom the new logon was created, i.e. the account that was 
+              logged on.
+              
+              The network fields indicate where a remote logon request originated. Workstation name is not always 
+              available and may be left blank in some cases.
+              
+              The impersonation level field indicates the extent to which a process in the logon session can 
+              impersonate.
+              
+              The authentication information fields provide detailed information about this specific logon request.
+              	- Logon GUID is a unique identifier that can be used to correlate this event with a KDC event.
+              	- Transited services indicate which intermediate services have participated in this logon request.
+              	- Package name indicates which sub-protocol was used among the NTLM protocols.
+              	- Key length indicates the length of the generated session key. This will be 0 if no session key was 
+              requested.
+
+
+
+
+
+
