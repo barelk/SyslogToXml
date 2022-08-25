@@ -5,8 +5,11 @@ This app’s main function is to enable a custom Splunk search command to conver
 
 # Prerequisites
 •	Install Splunk SDK for Python.
+
 •	Filtering syslog window events and the common suffix “This event” in Splunk.
+
 •	Load a txt file used as an xml database (under the “connection_to_xml_db” function).
+
 
 # Installation
 •	Unpack to $SPLUNK_HOME/etc/apps on your Splunk search head and restart the instance.
