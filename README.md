@@ -23,6 +23,6 @@ index=syslog  “This  event”
 | table xml_raw
 
 
-https://github.com/barelk/SyslogToXml
+[https://github.com/barelk/SyslogToXml](url)
 
 Built By Bar Elkalai
