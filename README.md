@@ -1,6 +1,6 @@
 # Splunk SysToXml Command
 
-This app’s main function is to enable a custom Splunk search command to convert syslog data to XML. XML logs are more understandable and readable and can be very helpful           for parsing and indexing data. By filtering syslog events in Splunk and using this command, you can quickly convert them to XML format.
+This app’s main function is to enable a custom Splunk search command to convert syslog window events to XML. XML logs are more understandable and readable and can be very helpful           for parsing and indexing data. By filtering syslog events in Splunk and using this command, you can quickly convert them to XML format.
 
  Note : your Splunk instance doesn’t require internet access.   
 
