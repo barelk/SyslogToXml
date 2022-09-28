@@ -21,7 +21,7 @@ This app’s main function is to enable a custom Splunk search command to conver
 	You can also filter by a specific event code/version by adding following condition:
        PS > $secEvents = get-winevent -listprovider "microsoft-windows-security-auditing"
        PS > for ($num = 0 ; $num -le 1000 ; $num++) {
-       # if($secEvents.Events[$num].Version -eq 1 -and $secEvents.Events[$num].Id -eq 4624)
+       if($secEvents.Events[$num].Version -eq 1 -and $secEvents.Events[$num].Id -eq 4624)
        {$secEvents.Events[$num]|Out -File -FilePath <string>\file.txt}
        }
 
