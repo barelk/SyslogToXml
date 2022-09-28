@@ -18,7 +18,7 @@ This app’s main function is to enable a custom Splunk search command to conver
        {$secEvents.Events[$num]|Out -File -FilePath <string>\file.txt}
        }
 
-	You can also filter by a specific event code/version by adding following condition:
+	You can also filter by a specific event code/version by adding the following condition:
        if($secEvents.Events[$num].Version -eq 1 -and $secEvents.Events[$num].Id -eq 4624)
 
 
