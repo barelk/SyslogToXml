@@ -11,14 +11,14 @@ This app’s main function is to enable a custom Splunk search command to conver
 
 •	Load a txt file used as an xml database (under the “connection_to_xml_db” function).
 
-	  How to create a list of xml events?
+How to create a list of xml events?
 	   Run the following powershell command:
        PS > $secEvents = get-winevent -listprovider "microsoft-windows-security-auditing"
        PS > for ($num = 0 ; $num -le 1000 ; $num++) {
        {$secEvents.Events[$num]|Out -File -FilePath <string>\file.txt}
        }
 
-		You can also filter by a specific event code/version by adding following condition:
+You can also filter by a specific event code/version by adding following condition:
        PS > $secEvents = get-winevent -listprovider "microsoft-windows-security-auditing"
        PS > for ($num = 0 ; $num -le 1000 ; $num++) {
        # if($secEvents.Events[$num].Version -eq 1 -and $secEvents.Events[$num].Id -eq 4624)
