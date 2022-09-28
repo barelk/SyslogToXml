@@ -34,9 +34,9 @@ The command returns a new field called “xml_raw” that displays syslog events
 
 Use as a search command like so:
 
-index=syslog  “This  event”
-| systoxml
-| table xml_raw
+	index=syslog  “This  event”
+	| systoxml
+	| table xml_raw
 
 
 [https://github.com/barelk/SyslogToXml](url)
