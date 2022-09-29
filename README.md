@@ -9,7 +9,7 @@ This app’s main function is to enable a custom Splunk search command to conver
 
 •	Filtering syslog window events and the common suffix “This event” in Splunk.
 
-•	Load a txt file used as an xml database (under the SPLUNK_HOME environment variable - “connection_to_xml_db” function).
+•	Load a txt file used as an xml database (under “connection_to_xml_db” function - set the SPLUNK_HOME environment variable).
 
 	How to create a list of xml events?
 	   Run the following powershell command:
