@@ -44,7 +44,8 @@ class SysToXml(StreamingCommand):
 
     def connection_to_xml_db(self):
         """Connecting to the xml file"""
-        f1 = open(r"C:\Users\barel\Desktop\xmldb.txt")
+        f1 = open(os.environ.get('SPLUNK_HOME'))
+        #f1 = open(r"C:\Users\barel\Desktop\xmldb.txt")
         xml = f1.read()
         f1.close()
         return xml
